@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script type="text/javascript">
+            function quiz() {
+                "use strict";
+                var co = 0;
+                if (document.getElementById("q1r3").checked) {
+                    co = co + 1;
+                }
+                if (document.getElementById("q2r2").checked) {
+                    co = co + 1;
+                }
+                if (document.getElementById("q3r1").checked) {
+                    co = co + 1;
+                }
+                document.getElementById("lq1r1").style.color = "#f00";
+                document.getElementById("lq1r1").style.textDecoration = "line-through";
+                document.getElementById("lq1r1").innerHTML += " (faux)";
+                document.getElementById("lq1r2").style.color = "#f00";
+                document.getElementById("lq1r2").style.textDecoration = "line-through";
+                document.getElementById("lq1r2").innerHTML += " (faux)";
+                document.getElementById("lq1r3").style.color = "#0c6";
+                document.getElementById("lq1r3").innerHTML += " (correcte)";
+
+                document.getElementById("lq2r2").style.color = "#0c6";
+                document.getElementById("lq2r2").innerHTML += " (correcte)";
+                document.getElementById("lq2r1").style.color = "#f00";
+                document.getElementById("lq2r1").style.textDecoration = "line-through";
+                document.getElementById("lq2r1").innerHTML += " (faux)";
+                document.getElementById("lq2r3").style.color = "#f00";
+                document.getElementById("lq2r3").style.textDecoration = "line-through";
+                document.getElementById("lq2r3").innerHTML += " (faux)";
+
+                document.getElementById("lq3r1").style.color = "#0c6";
+                document.getElementById("lq3r1").innerHTML += " (correcte)";
+                document.getElementById("lq3r2").style.color = "#f00";
+                document.getElementById("lq3r2").style.textDecoration = "line-through";
+                document.getElementById("lq3r2").innerHTML += " (faux)";
+                document.getElementById("lq3r3").style.color = "#f00";
+                document.getElementById("lq3r3").style.textDecoration = "line-through";
+                document.getElementById("lq3r3").innerHTML += " (faux)";
+
+                document.getElementById("score").innerHTML = co + "/3";
+            }
+        </script>
+        <link rel="stylesheet" href="../styles/style2.css" type="text/css">
+        <ul>
+            <li id="q1">
+                <h3>1. Quel est la syntaxe CSS correcte ?</h3>
+                <ul>
+                    <li>
+                        <input type="radio" id="q1r1" name="q1">
+                        <label id="lq1r1">body:color=black;</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q1r2" name="q1">
+                        <label id="lq1r2">{body:color=black;}</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q1r3" name="q1">
+                        <label id="lq1r3">body {color: black;}</label>
+                    </li>
+                </ul>    
+            </li>
+            <li id="q2">
+                <h3>2. Comment insérer un commentaire dans un fichier CSS ?</h3>
+                <ul>
+                    <li>
+                        <input type="radio" id="q2r1" name="q2">
+                        <label id="lq2r1">' c'est un commentaire '</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q2r2" name="q2">
+                        <label id="lq2r2">/* c'est un commentaire */</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q2r3" name="q2">
+                        <label id="lq2r3">// c'est un commentaire //</label>
+                    </li>
+                </ul>    
+            </li>
+            <li id="q3">
+                <h3>3. Quel est la proprieté a utiliser pour changer la couleur du fond ?</h3>
+                <ul>
+                    <li>
+                        <input type="radio" id="q3r1" name="q3">
+                        <label id="lq3r1">background-color</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q3r2" name="q3">
+                        <label id="lq3r2">bgcolor</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q3r3" name="q3">
+                        <label id="lq3r3">color</label>
+                    </li>
+                </ul>    
+            </li>
+        </ul>
+        <button onclick="quiz()" id="button">Submit</button>
+            <div class="score">
+                <p>votre score est : <span id="score">0/0</span></p>
+            </div>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+*
+{
+    background: #d1d1d1;
+    color:#2b2b2b;
+    height: auto;
+    font-family:monospace;
+}
+h3
+{
+    font-weight: 700;
+}
+
+li
+{
+    list-style: none;
+}
+button
+{
+    background: #2196f3;
+    padding: 5px 15px;
+    margin:20px 0px 0px 40px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 600;
+}
+.score
+{
+    margin-left: 40px;
+    font-size:1.5em;
+    font-weight: 600;
+}

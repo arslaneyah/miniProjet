@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script type="text/javascript">
+            function quiz() {
+                "use strict";
+                var co = 0;
+
+                if (document.getElementById("q1r3").checked) {
+                    co = co + 1;
+                }
+                if (document.getElementById("q2r2").checked) {
+                    co = co + 1;
+                }
+                if (document.getElementById("q3r3").checked) {
+                    co = co + 1;
+                }
+                document.getElementById("lq1r1").style.color = "#f00";
+                document.getElementById("lq1r1").style.textDecoration = "line-through";
+                document.getElementById("lq1r1").innerHTML += " (faux)";
+                document.getElementById("lq1r2").style.color = "#f00";
+                document.getElementById("lq1r2").style.textDecoration = "line-through";
+                document.getElementById("lq1r2").innerHTML += " (faux)";
+                document.getElementById("lq1r3").style.color = "#0c6";
+                document.getElementById("lq1r3").innerHTML += " (correcte)";
+
+                document.getElementById("lq2r2").style.color = "#0c6";
+                document.getElementById("lq2r2").innerHTML += " (correcte)";
+                document.getElementById("lq2r1").style.color = "#f00";
+                document.getElementById("lq2r1").style.textDecoration = "line-through";
+                document.getElementById("lq2r1").innerHTML += " (faux)";
+                document.getElementById("lq2r3").style.color = "#f00";
+                document.getElementById("lq2r3").style.textDecoration = "line-through";
+                document.getElementById("lq2r3").innerHTML += " (faux)";
+
+                document.getElementById("lq3r1").style.color = "#f00";
+                document.getElementById("lq3r1").style.textDecoration = "line-through";
+                document.getElementById("lq3r1").innerHTML += " (faux)";
+                document.getElementById("lq3r3").style.color = "#0c6";
+                document.getElementById("lq3r3").innerHTML += " (correcte)";
+                document.getElementById("lq3r2").style.color = "#f00";
+                document.getElementById("lq3r2").style.textDecoration = "line-through";
+                document.getElementById("lq3r2").innerHTML += " (faux)";
+
+
+                document.getElementById("score").innerHTML = co + "/3";
+            }
+            
+        </script>
+        <link rel="stylesheet" href="../styles/style2.css" type="text/css">
+        <ul>
+            <li id="q1">
+                <h3>1. Quel est la syntaxe JavaScript correcte pour référer un script externe appelé "script.js" ?</h3>
+                <ul>
+                    <li>
+                        <input type="radio" id="q1r1" name="q1">
+                        <label id="lq1r1">&lt;script name="script.js"></label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q1r2" name="q1">
+                        <label id="lq1r2">&lt;href="script.js"></label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q1r3" name="q1">
+                        <label id="lq1r3">&lt;script src="script.js"></label>
+                    </li>
+                </ul>    
+            </li>
+            <li id="q2">
+                <h3>2. Comment afficher le message "Hello world" dans une boite d'alerte ?</h3>
+                <ul>
+                    <li>
+                        <input type="radio" id="q2r1" name="q2">
+                        <label id="lq2r1">msg("Hello World");</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q2r2" name="q2">
+                        <label id="lq2r2">alert("Hello World");</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q2r3" name="q2">
+                        <label id="lq2r3">alertBox("Hello World");</label>
+                    </li>
+                </ul>    
+            </li>
+            <li id="q3">
+                <h3>3. Comment déclarer une fonction avec JavaScript ?</h3>
+                <ul>
+                    <li>
+                        <input type="radio" id="q3r1" name="q3">
+                        <label id="lq3r1">function myFunction()</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q3r2" name="q3">
+                        <label id="lq3r2">function:myFunction()</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q3r3" name="q3">
+                        <label id="lq3r3">function myFunction()</label>
+                    </li>
+                </ul>    
+            </li>
+        </ul>
+        <button onclick="quiz(1)" id="button">Submit</button>
+            <div class="score">
+                <p>votre score est : <span id="score">0/0</span></p>
+            </div>
+    </body>
+</html>

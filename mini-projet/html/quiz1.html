@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script type="text/javascript">
+            function quiz() {
+                "use strict";
+                var co = 0;
+
+                if (document.getElementById("q1r1").checked) {
+                    co = co + 1;
+                }
+                if (document.getElementById("q2r2").checked) {
+                    co = co + 1;
+                }
+                if (document.getElementById("q3r2").checked) {
+                    co = co + 1;
+                }
+                document.getElementById("lq1r1").style.color = "#0c6";
+                document.getElementById("lq1r1").innerHTML += " (correcte)";
+                document.getElementById("lq1r2").style.color = "#f00";
+                document.getElementById("lq1r2").style.textDecoration = "line-through";
+                document.getElementById("lq1r2").innerHTML += " (faux)";
+                document.getElementById("lq1r3").style.color = "#f00";
+                document.getElementById("lq1r3").style.textDecoration = "line-through";
+                document.getElementById("lq1r3").innerHTML += " (faux)";
+
+                document.getElementById("lq2r2").style.color = "#0c6";
+                document.getElementById("lq2r2").innerHTML += " (correcte)";
+                document.getElementById("lq2r1").style.color = "#f00";
+                document.getElementById("lq2r1").style.textDecoration = "line-through";
+                document.getElementById("lq2r1").innerHTML += " (faux)";
+                document.getElementById("lq2r3").style.color = "#f00";
+                document.getElementById("lq2r3").style.textDecoration = "line-through";
+                document.getElementById("lq2r3").innerHTML += " (faux)";
+
+                document.getElementById("lq3r2").style.color = "#0c6";
+                document.getElementById("lq3r2").innerHTML += " (correcte)";
+                document.getElementById("lq3r1").style.color = "#f00";
+                document.getElementById("lq3r1").style.textDecoration = "line-through";
+                document.getElementById("lq3r1").innerHTML += " (faux)";
+                document.getElementById("lq3r3").style.color = "#f00";
+                document.getElementById("lq3r3").style.textDecoration = "line-through";
+                document.getElementById("lq3r3").innerHTML += " (faux)";
+
+                document.getElementById("score").innerHTML = co + "/3";
+            }
+        </script>
+        <link rel="stylesheet" href="../styles/style2.css" type="text/css">
+        <ul>
+            <li id="q1">
+                <h3>1. Quel est le code HTML correct pour créer un lien hypertexte ?</h3>
+                <ul>
+                    <li>
+                        <input type="radio" id="q1r1" name="q1">
+                        <label id="lq1r1">&lt;a href="http://www.google.com">Google&lt;/a></label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q1r2" name="q1">
+                        <label id="lq1r2">&lt;a>http://www.google.com&lt;/a></label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q1r3" name="q1">
+                        <label id="lq1r3">&lt;a name="http://www.google.com">google.com&lt;/a></label>
+                    </li>
+                </ul>    
+            </li>
+            <li id="q2">
+                <h3>2. Comment pouvez-vous ouvrir un lien dans un nouvel onglet ?</h3>
+                <ul>
+                    <li>
+                        <input type="radio" id="q2r1" name="q2">
+                        <label id="lq2r1">&lt;a href="url" new></label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q2r2" name="q2">
+                        <label id="lq2r2">&lt;a href="url" target="_blank"></label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q2r3" name="q2">
+                        <label id="lq2r3">&lt;a href="url" target="new"></label>
+                    </li>
+                </ul>    
+            </li>
+            <li id="q3">
+                <h3>3. Quel est la balise HTML correcte pour créer un champ de saisie de texte </h3>
+                <ul>
+                    <li>
+                        <input type="radio" id="q3r1" name="q3">
+                        <label id="lq3r1">&lt;textfield></label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q3r2" name="q3">
+                        <label id="lq3r2">&lt;input type="text"></label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q3r3" name="q3">
+                        <label id="lq3r3">&lt;input type="textfield"></label>
+                    </li>
+                </ul>    
+            </li>
+        </ul>
+        <button onclick="quiz()" id="button">Submit</button>
+            <div class="score">
+                <p>votre score est : <span id="score">0/0</span></p>
+            </div>
+    </body>
+</html>

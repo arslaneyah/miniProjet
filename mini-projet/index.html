@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Mini Projet Daw</title>
+        <meta charset="utf-8">
+        
+        <link href="styles/style.css" rel="stylesheet" type="text/css" >
+    </head>
+        <body>
+            <script type="text/javascript">
+                function setURL(url) {
+                    "use strict";
+                    document.getElementById('iframe').src = url;
+                }
+            </script>
+            <header>
+                <h1>developement applications web</h1>
+            </header>
+            <div >
+                <ul class="pictures">
+                    <li><img src="pictures/html5.png" title="html5"></li>
+                    <li><img src="pictures/CSS3.png" title="css3"></li>
+                    <li><img src="pictures/JS.png" title="javascript" ></li>
+                    <li><img src="pictures/PHP.jpg" title="php"></li>
+                </ul>
+            </div>
+            <div class="navbar">
+                    <ul>
+                        <li><a onclick="setURL('html/introduction.html')" >Introduction</a></li>
+                        <li><a onclick="setURL('html/html.html')" >HTML5</a></li>
+                        <li><a onclick="setURL('html/css.html')">CSS3</a></li>
+                        <li><a onclick="setURL('html/javascript.html')">JAVASCRIPT</a></li>
+                        <li><a onclick="setURL('html/php.html')">PHP</a></li>
+                        <li class="dropdown"><a >Quiz</a>
+                            <div class="dropdown-content">
+                                <a onclick="setURL('html/quiz1.html')">Quiz HTML5</a>
+                                <a onclick="setURL('html/quiz2.html')">Quiz CSS3</a>
+                                <a onclick="setURL('html/quiz3.html')">Quiz JAVASCRIPT</a>
+                            </div>
+                        </li>
+                    </ul>
+            </div>
+            <div class="main">
+                <iframe id="iframe"  src="html/introduction.html"></iframe>
+            </div>
+            <footer>
+                <span>Contact: yahiouchearslane97@gmail.com</span>
+            </footer> 
+        </body>
+    
+</html>
